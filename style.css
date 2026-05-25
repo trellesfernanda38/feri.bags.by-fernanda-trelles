@@ -1,0 +1,157 @@
+/* ==========================================================================
+   ESTRUCTURA DE BIENVENIDA REORGANIZADA
+   ========================================================================== */
+.welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #0b1a3a; /* Azul Real Sólido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Espaciado uniforme entre texto, logo y botón */
+    z-index: 1000;
+    padding: 20px;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* El texto de arriba */
+.welcome-tagline {
+    color: #b0e0e6; /* Baby Blue */
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* El botón de carrito abajo */
+.shop-now-btn {
+    background-color: #b0e0e6; /* Fondo Baby Blue */
+    color: #0b1a3a;            /* Texto Azul Real */
+    font-family: 'Century Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 15px 35px;
+    border: 2px solid transparent;
+    border-radius: 50px;       /* Forma ovalada/estilizada */
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(176, 224, 230, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 12px;                 /* Espacio entre el icono del carrito y el texto */
+    transition: all 0.3s ease;
+}
+
+.shop-now-btn i {
+    font-size: 1.3rem;
+}
+
+.shop-now-btn:hover {
+    background-color: #ffffff; /* Cambia a blanco al pasar el cursor */
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   OPTIMIZACIÓN DE BIENVENIDA Y TAMAÑO DE LOGO
+   ========================================================================== */
+.welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #0b1a3a; /* Azul Real Sólido y Profundo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Genera un espacio elegante y separado entre los bloques */
+    z-index: 1000;
+    padding: 20px;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* El texto superior personalizado */
+.welcome-tagline {
+    color: #b0e0e6; /* Baby Blue */
+    font-family: 'Century Gothic', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(176, 224, 230, 0.3);
+}
+
+/* Contenedor del Logo */
+.logo-container {
+    position: relative;
+    width: 100%;
+    max-width: 450px; /* Hace que el logo sea más pequeño y no abarque toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* La Imagen del Logotipo */
+.brand-logo-img {
+    width: 100%; /* Se adapta al tamaño del contenedor (450px) */
+    height: auto;
+    filter: drop-shadow(0 0 25px rgba(176, 224, 230, 0.5)); /* Resplandor estético neón */
+    user-select: none;
+    animation: floatLogo 4s ease-in-out infinite; /* Animación sutil de flotado */
+}
+
+/* Animación sutil de levitación */
+@keyframes floatLogo {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+/* Botón de Carrito "VER CATÁLOGO" */
+.shop-now-btn {
+    background-color: #b0e0e6; /* Baby Blue */
+    color: #0b1a3a;            /* Azul Real */
+    font-family: 'Century Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 16px 40px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(176, 224, 230, 0.6); /* Brillo del botón */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.shop-now-btn:hover {
+    background-color: #ffffff;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* Ajuste fino para pantallas de celulares */
+@media (max-width: 768px) {
+    .logo-container {
+        max-width: 280px; /* Más pequeñito y estético en móviles */
+    }
+    .welcome-tagline {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+    .shop-now-btn {
+        font-size: 1rem;
+        padding: 12px 30px;
+    }
+}

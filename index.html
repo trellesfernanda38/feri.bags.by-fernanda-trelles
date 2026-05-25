@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feri Bags - Tienda de Moda</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="home-screen" class="welcome-screen active">
+        
+        <p class="welcome-tagline"> Bags super cute,totes y algo mas </p>
+        
+        <div class="logo-container" id="logo-welcome-container">
+            <div class="sparkles-container" id="sparkles-canvas"></div>
+            <img src="logo.bags.png" alt="Feri Bags Logo" class="brand-logo-img" id="main-logo">
+        </div>
+        
+        <button id="enter-store-btn" class="shop-now-btn">
+            <i class="fa-solid fa-cart-shopping"></i> VER CATÁLOGO
+        </button>
+        
+    </div>
+
+    <div id="main-content" class="main-layout hidden">
+        
+        <header class="navbar">
+            <div class="nav-logo">
+                <img src="logo.bags.png" alt="Feri Bags" class="nav-logo-img">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-btn active" data-target="catalogo-page">Catálogo</a></li>
+                    <li><a href="#" class="nav-btn" data-target="feedback-page">Feedback</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="catalogo-page" class="sub-page active">
+            <section class="page-header">
+                <h2><i class="fa-solid fa-bag-shopping"></i> Nuestro Catálogo</h2>
+                <p>Piezas exclusivas diseñadas para destacar.</p>
+            </section>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fa-solid fa-bag-shopping icon-placeholder"></i>
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Bolso Aurora Blue</h3>
+                        <p class="product-brand">Estilo Premium</p>
+                        <p class="product-price">$120.000</p>
+                        <button class="buy-btn">Ver Detalle</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fa-solid fa-wallet icon-placeholder"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Cartera Pastel Classic</h3>
+                        <p class="product-brand">Colección Vintage</p>
+                        <p class="product-price">$45.000</p>
+                        <button class="buy-btn">Ver Detalle</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section id="feedback-page" class="sub-page hidden">
+            <div class="page-header">
+                <h2><i class="fa-solid fa-star"></i> Reseñas de Clientes</h2>
+                <p>Déjanos tu opinión y comparte tu estilo con la comunidad.</p>
+            </div>
+            <div class="feedback-container">
+                <div class="feedback-form-box">
+                    <h3>Escribir Reseña</h3>
+                    <form id="feedback-form">
+                        <div class="form-group">
+                            <label for="user-name">Nombre:</label>
+                            <input type="text" id="user-name" required placeholder="Tu nombre...">
+                        </div>
+                        <div class="form-group">
+                            <label for="user-comment">Tu Opinión:</label>
+                            <textarea id="user-comment" rows="4" required placeholder="¿Qué te pareció tu artículo?"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Publicar Comentario ✨</button>
+                    </form>
+                </div>
+                <div class="feedback-list-box">
+                    <h3>Comentarios Recientes</h3>
+                    <div class="comments-list" id="comments-container">
+                        <div class="comment-item">
+                            <div class="comment-header">
+                                <strong>Valeria M.</strong>
+                                <span class="comment-stars">⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <p>"El Bolso Aurora superó mis expectativas. ¡Me encanta!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<script src="script.js"></script>
+</body>
+</html>
